@@ -4,7 +4,11 @@
       <h1>Moje ziomy</h1>
     </header>
     <ul>
-      <friend-contact></friend-contact>
+      <friend-contact
+          name="Manuel Lorenz"
+          phone-number="0 123455"
+          email-address="manuel@mail.com"
+      ></friend-contact>
       <friend-contact></friend-contact>
     </ul>
   </section>
