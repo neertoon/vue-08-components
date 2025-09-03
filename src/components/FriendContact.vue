@@ -14,10 +14,26 @@
 export default {
   // props: ['name', 'phoneNumber', 'emailAddress', 'isFavorite'],
   props: {
-    name: String,
-    phoneNumber: String,
-    emailAddress: String,
-    isFavorite: String
+    name: {
+      type: String,
+      required: true
+    },
+    phoneNumber: {
+      type: String,
+      required: true
+    },
+    emailAddress: {
+      type: String,
+      required: true
+    },
+    isFavorite: {
+      type: String,
+      required: true,
+      default: '0',
+      validator(value) {
+        return ['0', '1'].includes(value);
+      }
+    }
   },
   data() {
     return {
