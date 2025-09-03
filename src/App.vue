@@ -8,11 +8,13 @@
           name="Manuel Lorenz"
           phone-number="0 123455"
           email-address="manuel@mail.com"
+          is-favorite="1"
       ></friend-contact>
       <friend-contact
           name="Facet Gość"
           phone-number="0 99999"
           email-address="facet@mail.com"
+          is-favorite="0"
       ></friend-contact>
     </ul>
   </section>
