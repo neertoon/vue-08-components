@@ -27,12 +27,9 @@ export default {
       required: true
     },
     isFavorite: {
-      type: String,
+      type: Boolean,
       required: true,
-      default: '0',
-      validator(value) {
-        return ['0', '1'].includes(value);
-      }
+      default: false
     }
   },
   data() {
