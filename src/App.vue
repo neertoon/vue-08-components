@@ -9,7 +9,11 @@
           phone-number="0 123455"
           email-address="manuel@mail.com"
       ></friend-contact>
-      <friend-contact></friend-contact>
+      <friend-contact
+          name="Facet Gość"
+          phone-number="0 99999"
+          email-address="facet@mail.com"
+      ></friend-contact>
     </ul>
   </section>
 </template>
