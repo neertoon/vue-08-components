@@ -1,18 +1,18 @@
 <template>
-  <form>
+  <form @submit.prevent="submitData">
     <div>
       <label>Name</label>
-      <input type="text" name="name">
+      <input type="text" name="name" v-model="enteredName">
     </div>
 
     <div>
       <label>Phone</label>
-      <input type="text" name="phoneNumber">
+      <input type="text" name="phoneNumber" v-model="enteredPhone">
     </div>
 
     <div>
       <label>Email</label>
-      <input type="email" name="emailAddress">
+      <input type="email" name="emailAddress" v-model="enteredEmail">
     </div>
 
     <div>
@@ -23,18 +23,17 @@
 
 <script>
 export default {
-  emits: ['save'],
+  emits: ['add-contact'],
   data() {
     return {
-      detailsAreVisible: false,
+      enteredName: '',
+      enteredPhone: '',
+      enteredEmail: '',
     }
   },
   methods: {
-    toggleDetails() {
-      this.detailsAreVisible = !this.detailsAreVisible;
-    },
-    toggleFavorite() {
-      this.$emit('toggle-favorite', this.id);
+    submitData() {
+      this.$emit('add-contact', { name: this.enteredName, phone: this.enteredPhone, email: this.enteredEmail });
     }
   },
 }

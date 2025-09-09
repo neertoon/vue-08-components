@@ -3,7 +3,7 @@
     <header>
       <h1>Moje ziomy</h1>
     </header>
-    <new-friend></new-friend>
+    <new-friend @add-contact="addContact"></new-friend>
     <ul>
       <friend-contact
           v-for="friend in friends"
@@ -46,6 +46,17 @@ export default {
       const friendIndex = this.friends.findIndex(f => f.id === friendId);
 
       this.friends[friendIndex].isFavorite = !this.friends[friendIndex].isFavorite;
+    },
+    addContact(friendObject) {
+      const newFriend = {
+        id: new Date().toISOString(),
+        name: friendObject.name,
+        phone: friendObject.phone,
+        email: friendObject.email,
+        isFavorite: false,
+      }
+
+      this.friends.push(newFriend);
     }
   }
 }
