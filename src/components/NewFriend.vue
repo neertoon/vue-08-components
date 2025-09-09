@@ -23,9 +23,6 @@
 
 <script>
 export default {
-  props: {
-
-  },
   emits: ['save'],
   data() {
     return {
